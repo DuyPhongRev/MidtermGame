@@ -3,3 +3,19 @@
 	<iostream>
 	<SDL.h>
 
+1677172231 source:c:\chessgame\chessgame\src\chess.cpp
+	"Chess.h"
+
+1677172231 c:\chessgame\chessgame\include\chess.h
+
+1677172144 source:c:\chessgame\chessgame\src\game.cpp
+	"Game.h"
+
+1677173091 c:\chessgame\chessgame\include\game.h
+	<SDL.h>
+
+1677174124 source:c:\chessgame\chessgame\main.cpp
+	<iostream>
+	<SDL.h>
+	<Game.h>
+
