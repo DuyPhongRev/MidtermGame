@@ -5,6 +5,6 @@ using namespace std;
 
 int main(int argc, char* arg[])
 {
-    cout << "Test Git on Laptop";
+    cout << "Test Git on PC";
     return 0;
 }
