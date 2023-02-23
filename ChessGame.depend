@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1677170263 source:c:\chessgame\main.cpp
+	<iostream>
+	<SDL.h>
+
