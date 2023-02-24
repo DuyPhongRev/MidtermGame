@@ -6,7 +6,7 @@
 
 using namespace std;
 
-int main(int argc, char* arg[])
+int main(int argc, char* argv[])
 {
     Game *chess = new Game();
     chess->init("CHESS GAME", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, WIDTH, HEIGHT);

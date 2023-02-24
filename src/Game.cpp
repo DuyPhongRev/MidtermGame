@@ -1,5 +1,7 @@
 #include "Game.h"
 #include <iostream>
+#include "Chess.h"
+#include"../textureManange.h"
 
 using namespace std;
 
@@ -8,6 +10,8 @@ Game::Game()
 
 Game::~Game()
 {}
+
+Chess *piece;
 
 void Game::init(char *title, int xpos, int ypos, int width, int height)
 {
@@ -22,7 +26,9 @@ void Game::init(char *title, int xpos, int ypos, int width, int height)
         renderer = SDL_CreateRenderer(window, 0, -1);
         if (renderer == NULL) cout << "Fail to init renderer!" << endl;
         SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+        piece = new Chess("asset/w_queen_2x.png", renderer, 0, 0);
     }
+    std::string fileName = "image.png";
 }
 
 void Game::handleEvent()
@@ -39,15 +45,16 @@ void Game::handleEvent()
     }
 }
 
+void Game::update()
+{
+    piece->update();
+}
+
 void Game::render()
 {
     SDL_RenderClear(renderer);
+    piece->render();
     SDL_RenderPresent(renderer);
-}
-
-void Game::update()
-{
-
 }
 
 bool Game::isRunning()
