@@ -1,27 +1,45 @@
 #include "Chess.h"
-#include "../textureManange.h"
+#include "../TextureManager.h"
 #include <iostream>
 
 Chess::Chess(char *name, SDL_Renderer *ren, int x, int y)
 {
-    Renderer = ren;
-    Pieces = textureManange::loadTexture(name, Renderer);
-    if (Pieces != NULL) std::cout << 1;
     xpos = x;
     ypos = y;
+    Renderer = ren;
+
+    desRect.x = xpos;
+    desRect.y = ypos;
+    desRect.h = 80;
+    desRect.w = 80;
+
+    WhitePawn = TextureManager::LoadTexture("asset/pawn.png", Renderer, desRect);
+    desRect.x = xpos + 100;
+    desRect.y = ypos + 100;
+    BlackPawn = TextureManager::LoadTexture("asset/pawn1.png", Renderer, desRect);
+    /*Pieces = TextureManager::LoadTexture(name, Renderer, desRect);
+    Pieces = TextureManager::LoadTexture(name, Renderer, desRect);
+    Pieces = TextureManager::LoadTexture(name, Renderer, desRect);
+    Pieces = TextureManager::LoadTexture(name, Renderer, desRect);
+
+    Pieces = TextureManager::LoadTexture(name, Renderer, desRect);
+    Pieces = TextureManager::LoadTexture(name, Renderer, desRect);
+    Pieces = TextureManager::LoadTexture(name, Renderer, desRect);
+    Pieces = TextureManager::LoadTexture(name, Renderer, desRect);
+    Pieces = TextureManager::LoadTexture(name, Renderer, desRect);
+    Pieces = TextureManager::LoadTexture(name, Renderer, desRect);*/
 }
 
 void Chess::update()
 {
-
-    srcRect.h = 32;
-    srcRect.w = 32;
+    srcRect.h = 42;
+    srcRect.w = 42;
     srcRect.x = 0;
     srcRect.y = 0;
 
     desRect.x = xpos;
     desRect.y = ypos;
-    desRect.h = srcRect.h * 2;
+    desRect.h = srcRect.h ;
     desRect.w = srcRect.w * 2;
 }
 
