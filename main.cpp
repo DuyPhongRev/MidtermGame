@@ -6,16 +6,19 @@
 
 using namespace std;
 
-int main(int argc, char* arg[])
+int main(int argc, char* argv[])
 {
-    Game *chess = new Game();
-    chess->init("CHESS GAME", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, WIDTH, HEIGHT);
-    while(chess->isRunning())
+    Game *game = new Game();
+    game->init("CHESS GAME",SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, WIDTH, HEIGHT, false);
+    while(game->running())
     {
-        chess->handleEvent();
-        chess->update();
-        chess->render();
+        game->handleEvents();
+        game->update();
+        game->render();
+        SDL_Delay(20);
     }
-    chess->clean();
+
+    game->clean();
+
     return 0;
 }

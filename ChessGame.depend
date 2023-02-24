@@ -1,7 +1,8 @@
 # depslib dependency file v1.0
-1677170263 source:c:\chessgame\main.cpp
+1677229187 source:c:\chessgame\main.cpp
 	<iostream>
 	<SDL.h>
+	<Game.h>
 
 1677172231 source:c:\chessgame\chessgame\src\chess.cpp
 	"Chess.h"
@@ -18,4 +19,41 @@
 	<iostream>
 	<SDL.h>
 	<Game.h>
+
+1677226966 c:\chessgame\include\game.h
+	<SDL.h>
+	<SDL_image.h>
+
+1677230648 source:c:\chessgame\src\chess.cpp
+	"Chess.h"
+	"../TextureManager.h"
+	<iostream>
+
+1677230555 c:\chessgame\include\chess.h
+	"../TextureManager.h"
+
+1677229169 source:c:\chessgame\src\game.cpp
+	"Game.h"
+	<iostream>
+	"Chess.h"
+	"../TextureManager.h"
+
+1677214284 source:c:\chessgame\manageobject.cpp
+	"ManageObject.h"
+
+1677214284 c:\chessgame\manageobject.h
+	<SDL.h>
+	<SDL_image.h>
+
+1677227634 c:\chessgame\texturemanange.h
+	<Game.h>
+
+1677214760 source:c:\chessgame\texturemanange.cpp
+	"textureManange.h"
+
+1677230155 source:c:\chessgame\texturemanager.cpp
+	"TextureManager.h"
+
+1677229405 c:\chessgame\texturemanager.h
+	"Game.h"
 
