@@ -1,8 +1,8 @@
 #include <iostream>
 #include <SDL.h>
 #include <Game.h>
-#define WIDTH 800
-#define HEIGHT 800
+#define WIDTH 1024
+#define HEIGHT 1024
 
 using namespace std;
 

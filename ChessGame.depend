@@ -4,18 +4,25 @@
 	<SDL.h>
 	<Game.h>
 
-1677172231 source:c:\chessgame\chessgame\src\chess.cpp
+1677295772 source:c:\chessgame\chessgame\src\chess.cpp
 	"Chess.h"
+	"../TextureManager.h"
+	<iostream>
 
-1677172231 c:\chessgame\chessgame\include\chess.h
+1677295715 c:\chessgame\chessgame\include\chess.h
+	"../TextureManager.h"
 
-1677172144 source:c:\chessgame\chessgame\src\game.cpp
+1677295878 source:c:\chessgame\chessgame\src\game.cpp
 	"Game.h"
+	<iostream>
+	"Chess.h"
+	"../TextureManager.h"
 
-1677173091 c:\chessgame\chessgame\include\game.h
+1677295081 c:\chessgame\chessgame\include\game.h
 	<SDL.h>
+	<SDL_image.h>
 
-1677174124 source:c:\chessgame\chessgame\main.cpp
+1677295081 source:c:\chessgame\chessgame\main.cpp
 	<iostream>
 	<SDL.h>
 	<Game.h>
@@ -55,5 +62,11 @@
 	"TextureManager.h"
 
 1677229405 c:\chessgame\texturemanager.h
+	"Game.h"
+
+1677295081 source:c:\chessgame\chessgame\texturemanager.cpp
+	"TextureManager.h"
+
+1677295081 c:\chessgame\chessgame\texturemanager.h
 	"Game.h"
 

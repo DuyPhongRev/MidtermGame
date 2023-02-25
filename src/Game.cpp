@@ -12,7 +12,7 @@ Game::Game()
 
 Game::~Game()
 {}
-
+Chess *board = NULL;
 
 void Game::init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen)
 {
@@ -31,7 +31,7 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
         else SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
         isRunning = true;
     }
-
+    board = new Chess("asset/boardgame.png", renderer, 0, 0);
 }
 
 void Game::handleEvents()
@@ -50,13 +50,13 @@ void Game::handleEvents()
 
 void Game::update()
 {
-    piece->update();
+    board->update();
 }
 
 void Game::render()
 {
     SDL_RenderClear(renderer);
-    piece->render();
+    board->render();
     SDL_RenderPresent(renderer);
 }
 
